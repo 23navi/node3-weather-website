@@ -28,7 +28,7 @@ app.get("",(req,res)=>{
 
 app.get("/help",(req,res)=>{
     res.render("help",{
-        message:"Hello this is the message from the help section",
+        message:"Hello! If you find any problem using this application then feel free to contact me!",
         title : "Help",
         name: "Navi Sureka"
     })
@@ -91,16 +91,16 @@ app.get("/weather",(req,res)=>{
 
 
 //just to test query string
-app.get("/product",(req,res)=>{
-    if(!req.query.search){
-        return res.send({
-            error:"You must provide the search term"
-        })
-    }
-    res.send({
-        product:[]
-    })
-})
+// app.get("/product",(req,res)=>{
+//     if(!req.query.search){
+//         return res.send({
+//             error:"You must provide the search term"
+//         })
+//     }
+//     res.send({
+//         product:[]
+//     })
+// })
 
 
 app.get("/help/*",(req,res)=>{
