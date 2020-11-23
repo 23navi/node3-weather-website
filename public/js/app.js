@@ -27,7 +27,7 @@ weatherForm.addEventListener("submit",(e)=>{
             message2.textContent=data.error;
         }else{
             message1.textContent= "Your searched Address: "+data.Address;
-            message2.textContent="The temperature in "+data.Location+" is "+data.Tempreture
+            message2.textContent="The avg temperature in "+data.Location+" is "+data.Tempreture +" and the UV index is "+ data.UV;
         }
         
     })

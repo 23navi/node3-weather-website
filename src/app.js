@@ -69,7 +69,8 @@ app.get("/weather",(req,res)=>{
                 res.send({
                     Location: loc,
                     Address: city,
-                    Tempreture: response
+                    Tempreture: response.temp,
+                    UV: response.uv
                     })
             })
         })

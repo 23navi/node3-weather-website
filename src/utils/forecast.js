@@ -9,7 +9,12 @@ const forecast = (lat,long, callback)=>{
         } else if(response.body.error){
             callback("Cannot find the place, plz try something else",undefined);
         } else {
-            callback(undefined,response.body.forecast.forecastday[0].day.maxtemp_c+" C");
+            const temp =response.body.forecast.forecastday[0].day.avgtemp_c+" C";
+            const uv= response.body.forecast.forecastday[0].day.uv;
+            callback(undefined,{
+                temp,
+                uv
+            });
         }
     })
 
